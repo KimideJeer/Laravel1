@@ -21,6 +21,7 @@
             <th>Stock Ticket</th>
             <th>Stock Value</th>
             <th>Updated at</th>
+            <th></th>
           </tr>
       </thead>
       <tbody>
@@ -31,6 +32,7 @@
               <td>{{$stock->ticket}}</td>
               <td>{{$stock->value}}</td>
               <td>{{$stock->updated_at}}</td>
+              <td><a href="/stocks/edit/{{$stock->id}}" class="btn btn-primary">Edit</a></td>
           </tr>
           @endforeach
       </tbody>
