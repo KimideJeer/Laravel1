@@ -9,6 +9,10 @@
 </head>
 <body>
   <div class="container" style="margin:40px;">
+  <h1 class="display-3">Stocks</h1>
+<div>
+  <a href="/stocks/create" class="btn btn-primary mb-3">Add Stock</a>
+</div> 
     <table class="table">
       <thead class="thead-light">
           <tr>
