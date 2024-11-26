@@ -17,13 +17,15 @@
           <th>Delete</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody> 
+        @php( $sum=0 )  
         @foreach($stocks as $stock)
         <tr>
             <td>{{$stock->id}}</td>
             <td>{{$stock->stock_name}} </td>
             <td>{{$stock->ticket}}</td>
-            <td>{{$stock->value}}</td>
+            <td>€{{ number_format($stock->value, 2, ',', '.') }}</td> <!--Monetsign plaatsen -->
+            @php($sum += $stock->value) <!-- Totaal bereken --> 
             <td>{{$stock->updated_at}}</td>
             <td><a href="/stocks/edit/{{$stock->id}}" class="btn btn-primary">Edit</a></td>
             <td>
@@ -35,5 +37,11 @@
         </tr>
         @endforeach
     </tbody>
+    <tfoot>
+    <tr>
+                <td colspan="3"></td>
+            <td><strong>€{{ number_format($sum, 2, ',', '.') }}</strong></td> <!-- De totaalwaarde tonen -->
+    </tr>
+    </tfoot>
   </table>
 @endsection
