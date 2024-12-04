@@ -1,8 +1,7 @@
 @extends('base')
 @section('title', 'New Stock')
 @section('content')
-<body>
-  <div class="container" style="margin:40px;">
+
 
 
     <form method="post" action="/stocks/store">
@@ -24,8 +23,5 @@
           <button type="submit" class="btn btn-primary">Add Stock</button>
       </form>
 
-  </div>
 
-</body>
-</html>
 @endsection

@@ -1,8 +1,7 @@
 @extends('base')
 @section('title', 'Edit Stock')
 @section('content')
-<body>
-  <div class="container" style="margin:40px;">
+
 
 
     <form method="post" action="/stocks/update/{{$stock->id}}">
@@ -25,8 +24,5 @@
         <button type="submit" class="btn btn-primary">Update</button>
     </form>
 
-  </div>
 
-</body>
-</html>
 @endsection
